@@ -1,0 +1,71 @@
+Creating a new Git User and Linking an Email Address to this User
+
+git config --global user.name “Suzan” 
+git config --global user.email suzan@gmail.com
+git config --list // To verify new changes
+
+-----------------------------------------------------------------------------------------------------------
+
+Creating a new Local Git Repository
+
+cd “C:\Local_Git_Repository” // Move to the directory where you can create a new Git repository.
+
+mkdir Lab1 // Create a new Directory for your new Git Repository:
+* mkdir creates directory and cd opens that directory. So, cd Lab1 opens that directory.
+
+git init // Initialize a new Git Repository by creating a .git subdirectory. 
+* Run only once per repository or it will override!
+
+git status // To check uncommitted files
+
+git add HelloWorld.py // Staging files in Git to prepare them for the “Commit” Action
+
+git commit -m “Write a comment here” // If you forget to add a comment when committing, error!
+
+git diff // View the file differences. 
+
+-----------------------------------------------------------------------------------------------------------
+
+Git Branches
+
+git branch “branch1” // create a new git branch
+
+git checkout “branch1” // to check out or switch to a different Git local branch
+
+git branch // check which branch you are in. 
+==> It will show * master if you are in master branch and * branch_name if you’re in elsewhere
+
+Merging Git Branches
+git merge “branch_name” // where branch_name is the one that will COME combine 
+==> If you’re trying to merge branch1 into branch2, then you need to git checkout branch2. Stay where you are combining into. 
+
+-----------------------------------------------------------------------------------------------------------
+
+GitHub Account
+
+git remote -v // to check if the current local git repository has the remote repository server correctly configured
+/………
+
+Git Tags
+
+Git Submodules
+
+git remote add origin https://github.com/suzan-ichat/Lab1.git
+
+-----------------------------------------------------------------------------------------------------------
+
+Q1: Why is it necessary to have an intermediate “git add” command in the git workflow for a commit?
+Because it allows selective committing, avoid unintended committing, review changes and collaborate with team members.
+Q2: What is the purpose of describing the changes in the commit command?
+	For documentation, communication, future reference, and tracking purposes.
+Q3: What does the green and red colour coded lines mean when you issue git diff?
+	Red: - this line is the older version
+	Green: + this line is the newer version
+Q4: Under what circumstances will you use branching in a software development project?
+	For feature development, bug fixing, prototyping, code reviews, collaborating with multiple teams, maintenance and experimenting. 
+Q5: What does the term origin refer to in the command git push –set-upstream origin master?
+	Origin Is a conventional name for a remote repository. Also a default remote name in Git. It connects between local and remote repositories.
+Q6: Do you need the --set-upstream option for subsequent git push commands?
+	No, because –set-upstream is only for the initial set up. First push is *git push -u origin “branch_name”* subsequent push is git push.
+
+
