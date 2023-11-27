@@ -1,0 +1,41 @@
+LAB 3 
+Developing Software Unit Tests
+
+** File > Settings > Tools > Python Integrated Tools
+Testing section => select pytest => apply => ok
+
+keyword assert(...) to evaluate the return value of a Python function with the expected values  
+
+To copy the Git repository from Remote to Local:
+git clone https://github.com/SuzanUwU/Lab3.git
+** If you forget the submodule inside it==>
+cd "Lab3"
+cd "submodule_inside_it"
+git submodule init
+git submodule update
+
+git submodule add "url of the git repository"
+
+Q: What files are found in the __pycache__/ folder?
+bmi.cpython-312.pyc
+Lab2.cpython-312.pyc
+and another.pyc files
+They do not need to be included in my git repository because they are just compiled python files
+
+For the Git to ignore the pycache folder,
+1. Create .gitignore folder in the local 
+2. Open .gitignore file and write __pycache__/
+
+if not all(isinstance(x, int) for x in arr):
+	return 2  # Return 2 if any element is not an integer
+
+git remote -v // to check your remote connection
+git remote set-url origin {URL} // to update the remote origin 
+
+cd .. to go back to the past file
+
+
+
+
+
+
