@@ -1,0 +1,122 @@
+LAB 2 NOTES
+
+File > New Project > Location > Previously configured interpreter selected >> 
+	Interpreter = Python 3.12 
+	(or) 
+	Add Interpreter > Add local interpreter > System Interpreter > ...python.exe
+>> New Python File > Run
+=> Process finished with exit code 0
+
+---------------------------------------------------------------------------------------------------------------------
+
+Local Git Repository - Staging Steps 
+
+1. cd "the file you wanna work on"
+2. git init 
+3. git status
+4. git add * // * is a wildcard filter that requests git to stage all files within the current repository folder
+5. git commit -m "comment" // Comment ma pr yin editor pwint lr p sek lote lo ma ya buu fik tl naw
+
+---------------------------------------------------------------------------------------------------------------------
+
+Push to Remote Git Repository
+
+1. Create a new repository in GitHub
+2. Copy the URL of the remote GitHub repository
+3. git remote add origin *link*
+4. git remote -v
+5. git push --set-upstream origin master // commit first then push, you cannot push the files you didn't commit!
+
+---------------------------------------------------------------------------------------------------------------------
+
+EXERCISE 1
+
+height_str = "57"
+height_float = 1.73
+print ("Height " + height_str) // no problem
+print ("Height " + height_float) // TypeError: can only concatenate str (not "float") to str
+
+to solve this:
+print ("Height " + str(height_float)) // run success
+Because str() converts its parameters to string
+
+---------------------------------------------------------------------------------------------------------------------
+
+EXERCISE 1 Code
+
+def calculate_bmi(height, weight):
+    print("Height = " + str(height))
+    print("Weight = " + str(weight))
+
+    # Code to calculate BMI
+    BMI = weight / (height * height)
+
+    # Check under, over or normal weight
+    if BMI < 18.5:
+        user = "Under weight"
+    elif 18.5 <= BMI <= 25.0:
+        user = "Normal weight"
+    else:
+        user = "Over weight"
+
+    # Code to display the calculated BMI
+    print("BMI is " + str(BMI) + "\nThis person is " + user)
+
+    if user == "Under weight":
+        return -1
+    elif user == "Normal weight":
+        return 0
+    elif user == "Over weight":
+        return 1
+
+
+calculate_bmi(weight=57, height=1.73)
+
+---------------------------------------------------------------------------------------------------------------------
+
+Python Main Entry Point
+
+main()
+
+def main():
+	print("Some text")
+	display_main_menu()
+	num_list = get_user_input()
+if __name__ == "__main__" // checks if the current script is the main Python file and then calls the main() function
+	main()
+
+---------------------------------------------------------------------------------------------------------------------
+
+EXERCISE for Functions 
+
+get_user_input() ** IMPORTANT
+
+def get_user_input():
+    input_text = input() // get the user input from console
+    text_list = input_text.split(",") // split the string input_text based on commas (",")
+
+	# two different ways to convert list of strings to list of floats
+    (1) float_list = [float(ele) for ele in text_list]
+    (2) float_list = list(map(float, text_list))
+
+    print("User Input: " + str(float_list))
+    return float_list
+
+---------------------------------------------------------------------------------------------------------------------
+
+* refer to Lab2 in GitHub for the codes *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
